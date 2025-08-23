@@ -15,7 +15,7 @@ acronym.forEach(item => {
   const li = document.createElement('li');
   li.className = 'acronym-row';
   li.innerHTML = `<div class="letter" aria-hidden="true">${item.letter}</div>
-                  <div class="meaning"><strong>${item.letter}</strong> — ${item.meaning}</div>`;
+                  <div class="meaning"><strong>${item.meaning}</strong></div>`;
   list.appendChild(li);
 });
 

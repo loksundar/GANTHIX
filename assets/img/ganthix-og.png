@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0e0f12"/><stop offset="1" stop-color="#0b0c10"/>
+    </linearGradient>
+    <linearGradient id="t" x1="0" y1="0" x2="1200" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D4AF37"/><stop offset="0.5" stop-color="#C0C0C0"/><stop offset="1" stop-color="#D4AF37"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <text x="600" y="300" text-anchor="middle" font-size="120" fill="url(#t)" font-family="Arial, Helvetica, sans-serif" font-weight="800">GANTHIX</text>
+  <text x="600" y="380" text-anchor="middle" font-size="28" fill="#c9cbd1" font-family="Arial, Helvetica, sans-serif">
+    Generative AI for Next-gen Transformation, Human-centered Intelligence &amp; eXperiments
+  </text>
+</svg>

@@ -1,0 +1,197 @@
+/* ==============================
+   GANTHIX — Landing Styles
+   Palette: calm black with silver & gold accents
+   ============================== */
+
+:root{
+  --bg: #0e0f12;           /* deep charcoal */
+  --bg-2: #0b0c10;         /* slightly darker for gradient depth */
+  --fg: #E6E7EB;           /* soft off-white */
+  --muted: #A7ABB3;        /* muted silver */
+  --silver: #C0C0C0;       /* silver accent */
+  --gold: #D4AF37;         /* gold accent */
+  --accent-grad: linear-gradient(90deg, #D4AF37, #C0C0C0, #D4AF37);
+  --shadow: 0 8px 40px rgba(0,0,0,.45);
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+html { scroll-behavior: smooth; }
+body{
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  color: var(--fg);
+  background: radial-gradient(1200px 800px at 20% 10%, #14161b 0%, transparent 55%),
+              radial-gradient(1200px 800px at 80% 90%, #101216 0%, transparent 55%),
+              linear-gradient(180deg, var(--bg), var(--bg-2));
+  line-height: 1.45;
+}
+
+.skip-link{
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.skip-link:focus{
+  position: fixed;
+  left: 1rem; top: 1rem;
+  width: auto; height: auto;
+  padding: .5rem .75rem;
+  background: #000;
+  color: var(--fg);
+  border: 1px solid #333;
+  border-radius: .5rem;
+  z-index: 1000;
+}
+
+.site{
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 48px 20px 80px;
+}
+
+.hero{
+  display: grid;
+  place-items: center;
+  text-align: center;
+  gap: 14px;
+  padding: 32px 0 12px;
+}
+
+.logo{
+  filter: drop-shadow(var(--shadow));
+}
+
+.brand{
+  font-size: clamp(40px, 8vw, 84px);
+  letter-spacing: 0.08em;
+  margin: 0;
+  font-weight: 800;
+  line-height: 0.9;
+  text-shadow: 0 2px 18px rgba(0,0,0,.35);
+}
+
+.word .char{
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px) scale(0.98);
+  filter: blur(2px);
+  background: var(--accent-grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.tagline{
+  margin: 6px 0 0;
+  color: var(--muted);
+  max-width: 48ch;
+}
+
+.acronym{
+  margin-top: 28px;
+}
+
+.acronym-list{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 14px;
+}
+
+.acronym-row{
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 16px;
+  align-items: center;
+  padding: 14px 18px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity .6s ease, transform .6s ease, border-color .6s ease;
+}
+
+.acronym-row .letter{
+  font-weight: 800;
+  font-size: 28px;
+  background: var(--accent-grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 1px 8px rgba(0,0,0,.35);
+}
+
+.acronym-row .meaning{
+  font-size: 18px;
+  color: var(--fg);
+}
+
+.acronym-row.show{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.status{
+  text-align: center;
+  margin: 36px 0 8px;
+}
+
+.coming-soon{
+  display: inline-block;
+  font-size: 20px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  padding: 10px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.02);
+  box-shadow: var(--shadow);
+  background-image: var(--accent-grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.founder{
+  margin-top: 12px;
+  color: var(--muted);
+}
+.founder a{
+  color: var(--silver);
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(255,255,255,.25);
+}
+.founder a:hover{
+  color: var(--gold);
+  border-bottom-color: var(--gold);
+}
+
+.footer{
+  text-align: center;
+  margin-top: 48px;
+  color: var(--muted);
+  font-size: 14px;
+  opacity: .9;
+}
+
+/* Accessibility: respect reduced motion */
+@media (prefers-reduced-motion: reduce){
+  .word .char, .acronym-row{
+    transition: none !important;
+    transform: none !important;
+  }
+}
+/* Visually hidden utility */
+.visually-hidden{
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden; clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}

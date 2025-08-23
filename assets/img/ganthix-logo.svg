@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="GANTHIX emblem">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="256" y2="256" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D4AF37"/>
+      <stop offset="0.5" stop-color="#C0C0C0"/>
+      <stop offset="1" stop-color="#D4AF37"/>
+    </linearGradient>
+    <filter id="s" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+  <rect x="16" y="16" width="224" height="224" rx="28" fill="#0e0f12" stroke="url(#g)" stroke-width="2" filter="url(#s)"/>
+  <path d="M178 126h-44v24h62c-5 30-34 54-70 54-40 0-72-32-72-72s32-72 72-72c28 0 52 16 64 40l-22 12c-8-16-26-28-42-28-28 0-50 22-50 48s22 48 50 48c18 0 34-10 42-24h-40v-30h50v0z" fill="url(#g)"/>
+</svg>
